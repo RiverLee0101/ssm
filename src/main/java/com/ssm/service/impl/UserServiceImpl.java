@@ -3,10 +3,12 @@ package com.ssm.service.impl;
 import com.ssm.dao.IUserDao;
 import com.ssm.dao.UserMapper;
 import com.ssm.model.User;
+import com.ssm.model.UserExample;
 import com.ssm.service.IUserService;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
+import java.util.List;
 
 @Service("userService")
 public class UserServiceImpl implements IUserService {
@@ -25,5 +27,9 @@ public class UserServiceImpl implements IUserService {
 
     public void addUser(User user){
         userMapper.insert(user);
+    }
+
+    public List<User> selectAll(UserExample example){
+     return userMapper.selectByExample(example);
     }
 }
