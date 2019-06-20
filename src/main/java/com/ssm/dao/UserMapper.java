@@ -2,6 +2,8 @@ package com.ssm.dao;
 
 import com.ssm.model.User;
 import com.ssm.model.UserExample;
+
+import java.io.Serializable;
 import java.util.List;
 import org.apache.ibatis.annotations.Param;
 

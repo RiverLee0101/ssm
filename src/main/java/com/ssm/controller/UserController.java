@@ -34,6 +34,7 @@ public class UserController {
         UserExample example = new UserExample();
         UserExample.Criteria criteria = example.createCriteria();
         List<User> users = userService.selectAll(example);
+        System.out.println("UserController:"+users);
         model.addAttribute("users", users);
         return "index";
     }

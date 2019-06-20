@@ -193,6 +193,30 @@
       <version>4.5.5</version>
     </dependency>
 
+    <!--elasticsearch-->
+    <dependency>
+      <groupId>org.elasticsearch</groupId>
+      <artifactId>elasticsearch</artifactId>
+      <version>5.6.5</version>
+    </dependency>
+    <dependency>
+      <groupId>org.elasticsearch.client</groupId>
+      <artifactId>transport</artifactId>
+      <version>5.6.5</version>
+    </dependency>
+    <dependency>
+      <groupId>log4j</groupId>
+      <artifactId>log4j</artifactId>
+      <version>1.2.17</version>
+    </dependency>
+
+    <!-- spring整合es -->
+    <dependency>
+      <groupId>org.springframework.data</groupId>
+      <artifactId>spring-data-elasticsearch</artifactId>
+      <version>2.0.4.RELEASE</version>
+    </dependency>
+
   </dependencies>
 
   <build>
@@ -203,8 +227,8 @@
         <artifactId>maven-compiler-plugin</artifactId>
         <configuration>
           <!-- 设置JDK版本 -->
-          <source>1.7</source>
-          <target>1.7</target>
+          <source>1.8</source>
+          <target>1.8</target>
         </configuration>
       </plugin>
 
