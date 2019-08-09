@@ -78,10 +78,5 @@ public class UserController {
         response.getWriter().write(mapper.writeValueAsString(user));
         response.getWriter().close();
     }
-
-    @RequestMapping("/doGetControllerOne")
-    public String doGetControllerOne(){
-        System.out.println("yes");
-        return "123";
-    }
+    
 }
