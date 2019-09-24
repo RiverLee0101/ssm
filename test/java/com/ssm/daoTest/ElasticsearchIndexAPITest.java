@@ -289,19 +289,19 @@ public class ElasticsearchIndexAPITest {
     @Test
     public void testBulkApi() throws IOException{
         BulkRequestBuilder requestBuilder = client.prepareBulk();
-        requestBuilder.add(client.prepareIndex(INDEX, TYPE, "1")
+        requestBuilder.add(client.prepareIndex(INDEX, TYPE, "4") // 唯一的id，字段内容相同则不变，字段内容有改动则改变响应的字段内容
                 .setSource(jsonBuilder()
                         .startObject()
-                        .field("user", "张三")
+                        .field("user", "张san test")
                         .field("postDate", "2018-05-01")
                         .field("message", "zhangSan message test")
                         .endObject()
                 )
         );
-        requestBuilder.add(client.prepareIndex(INDEX, TYPE, "2")
+        requestBuilder.add(client.prepareIndex(INDEX, TYPE, "5")
                 .setSource(jsonBuilder()
                         .startObject()
-                        .field("user", "李四")
+                        .field("user", "李四 test")
                         .field("postDate", "2016-09-10")
                         .field("message", "Lisi message test")
                         .endObject()
